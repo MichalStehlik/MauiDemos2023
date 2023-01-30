@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="m01FirstApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:m01FirstApp"
+    xmlns:pages="clr-namespace:m01FirstApp.Pages"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Stack layout demo">
+            <ShellContent
+                Title="Stack"
+                ContentTemplate="{DataTemplate pages:StackPage}"
+                Route="StackPage" />
+        </Tab>
+        <Tab Title="Grid layout demo">
+            <ShellContent
+                Title="Grid"
+                ContentTemplate="{DataTemplate pages:GridPage}"
+                Route="GridPage" />
+        </Tab>
+        <Tab Title="Absolute layout demo">
+            <ShellContent
+                Title="Absolute"
+                ContentTemplate="{DataTemplate pages:AbsolutePage}"
+                Route="AbsolutePage" />
+        </Tab>
+        <Tab Title="Flex layout demo">
+            <ShellContent
+                Title="Flex"
+                ContentTemplate="{DataTemplate pages:FlexPage}"
+                Route="FlexPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Counter">
+            <ShellContent
+                Title="Counter"
+                ContentTemplate="{DataTemplate pages:CounterPage}"
+                Route="CounterPage" />
+        </Tab>
+    </FlyoutItem>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+</Shell>
