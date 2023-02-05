@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="m02Controls.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:m02Controls"
+    xmlns:pages="clr-namespace:m02Controls.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    CurrentItem="{x:Reference TabMain}"
+    >
+    <TabBar>
+        <Tab Title="Začátek" Route="main">
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" x:Name="TabMain" />
+        </Tab>
+        <Tab Title="Příkazy" Route="command">
+            <ShellContent ContentTemplate="{DataTemplate pages:CommandsPage}" x:Name="TabCommand" />
+        </Tab>
+        <Tab Title="Text" Route="text">
+            <ShellContent ContentTemplate="{DataTemplate pages:TextPage}" x:Name="TabText" />
+        </Tab>
+        <Tab Title="Vstup dat" Route="set">
+            <ShellContent ContentTemplate="{DataTemplate pages:SetPage}" x:Name="TabSet" />
+        </Tab>
+        <Tab Title="Indikátory" Route="indicator">
+            <ShellContent ContentTemplate="{DataTemplate pages:IndicatorPage}" x:Name="TabIndicator" />
+        </Tab>
+        <Tab Title="Prezentování" Route="present">
+            <ShellContent ContentTemplate="{DataTemplate pages:PresentPage}" x:Name="TabPresent" />
+        </Tab>
+        <Tab Title="Kolekce" Route="collection">
+            <ShellContent ContentTemplate="{DataTemplate pages:CollectionPage}" x:Name="CollectionPresent" />
+        </Tab>
+    </TabBar>
+</Shell>

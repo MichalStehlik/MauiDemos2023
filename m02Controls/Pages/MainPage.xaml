@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="m02Controls.Pages.MainPage"
+             Title="Začátek"
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Button Text="Příkazy" x:Name="CommandsButton"  Clicked="CommandsButton_Clicked"/>
+            <Button Text="Textové prvky" x:Name="TextButton"  Clicked="TextButton_Clicked"/>
+            <Button Text="Hodnoty" x:Name="SetButton"  Clicked="SetButton_Clicked"/>
+            <Button Text="Indikátory" x:Name="IndicatorButton"  Clicked="IndicatorButton_Clicked"/>
+            <Button Text="Prezentace" x:Name="PresentButton"  Clicked="PresentButton_Clicked"/>
+            <Button Text="Kolekce" x:Name="CollectionButton"  Clicked="CollectionButton_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
