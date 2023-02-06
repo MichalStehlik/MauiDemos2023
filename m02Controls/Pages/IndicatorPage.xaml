@@ -4,9 +4,12 @@
              x:Class="m02Controls.Pages.IndicatorPage"
              Title="IndicatorPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <ActivityIndicator 
+            IsRunning="True"
+            Color="Aquamarine"
+            IsVisible="True"
+            Margin="10"
+            />
+        <ProgressBar Progress=".75" Margin="10" />
     </VerticalStackLayout>
 </ContentPage>

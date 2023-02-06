@@ -6,4 +6,14 @@ public partial class CommandsPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+
+	}
+
+	private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
+	{
+
+	}
 }
