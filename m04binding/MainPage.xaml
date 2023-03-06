@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:m04binding.Models"
+             x:Class="m04binding.MainPage">
+    <ContentPage.Resources>
+        <model:Person 
+            Firstname="Fred" 
+            Lastname="Falcon" 
+            Age="10" 
+            x:Key="person" 
+            />
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                x:Name="lblOutput"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <Label
+                Text="{Binding Source={StaticResource person}, Path=Firstname}"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="ChangeBtn"
+                Text="Click me"
+                Clicked="ChangeBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Slider Minimum="0" Maximum="100" x:Name="sliValue" Value="20" />
+            <Label Text="{Binding Source={x:Reference sliValue}, Path=Value}" />
+
+            <Entry x:Name="source" Text="Start"/>
+            <Entry Text="{Binding Source={x:Reference source}, Path=Text, Mode=TwoWay}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
