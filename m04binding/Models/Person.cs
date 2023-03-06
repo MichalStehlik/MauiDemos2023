@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace m04binding.Models
 {
-    internal class Person : INotifyPropertyChanged
+    public class Person : INotifyPropertyChanged
     {
         private string _firstname;
         private string _lastname;

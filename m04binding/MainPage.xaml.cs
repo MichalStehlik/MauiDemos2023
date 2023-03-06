@@ -6,13 +6,26 @@ using System.Runtime.CompilerServices;
 
 namespace m04binding
 {
-    public partial class MainPage : ContentPage, INotifyPropertyChanged
+    public partial class MainPage : ContentPage
     {
         private Person _p;
+        public Person P
+        {
+            get => _p;
+            set { 
+                _p = value;
+                OnPropertyChanged(nameof(this.P));
+                if (lblOutput != null) // přebindování ostatních vazeb po změně objektu
+                {
+                    lblOutput.BindingContext = P;
+                    lblOutput.SetBinding(Label.TextProperty, nameof(Person.Lastname));
+                }
+            }
+        }
 
         public MainPage()
         {
-            _p = new Person
+            P = new Person
             {
                 Firstname = "Alfons",
                 Lastname = "Avatar",
@@ -24,24 +37,19 @@ namespace m04binding
             //personalBinding.Source = _p;
             //personalBinding.Path = nameof(Person.Lastname);
             // lblOutput.SetBinding(Label.TextProperty, personalBinding);
-            lblOutput.BindingContext = _p;
+            lblOutput.BindingContext = P;
             lblOutput.SetBinding(Label.TextProperty, nameof(Person.Lastname));
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            _p.Lastname = "Bořislav";
+            P.Lastname = "Bořislav";
         }
 
         private void ChangeBtn_Clicked(object sender, EventArgs e)
         {
-            _p = new Person { Firstname = "Jakub", Lastname = "Jouda", Age = 12 };
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string propName = null) // název bindou se doplní automaticky
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+            P = new Person { Firstname = "Jakub", Lastname = "Jouda", Age = 12 };
+            OnPropertyChanged("P");
         }
     }
 }
