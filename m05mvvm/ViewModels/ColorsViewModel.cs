@@ -13,6 +13,7 @@ namespace m05mvvm.ViewModels
         private int _red = 100;
         private int _green = 20;
         private int _blue = 30;
+        private int _luminance = 0;
         private Color _color;
 
         public ColorsViewModel()
@@ -35,7 +36,7 @@ namespace m05mvvm.ViewModels
             set { 
                 _green = value;
                 Color = new Color(Red, value, Blue);
-                OnPropertyChanged(); 
+                OnPropertyChanged();
             }
         }
         public int Blue
@@ -44,13 +45,30 @@ namespace m05mvvm.ViewModels
             set { 
                 _blue = value; 
                 Color = new Color(Red, Green, value);
-                OnPropertyChanged(); 
+                OnPropertyChanged();
             }
         }
         public Color Color
         {
             get { return _color; }
-            set { _color = value; OnPropertyChanged(); }
+            set { 
+                _color = value;
+                Luminance = (int)(0.2126 * Red + 0.7152 * Green + 0.0722 * Blue);
+                OnPropertyChanged(); 
+                OnPropertyChanged(nameof(Brightness));
+                OnPropertyChanged(nameof(ColorText));
+            }
+        }
+
+        public string ColorText { get { return Color.ToArgbHex(); } }
+
+        public int Brightness { get { return ((Red + Green + Blue) / 3); } }
+        public int Luminance { 
+            get { return _luminance; }
+            set { 
+                _luminance = value;
+                OnPropertyChanged();
+            } 
         }
 
         #region MVVM
