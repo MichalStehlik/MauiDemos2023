@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:m05mvvm.ViewModels"
+             x:Class="m05mvvm.Views.ColorsPage"         
+             Title="ColorsPage">
+    <VerticalStackLayout>
+        <Frame>
+            <Frame.BindingContext>
+                <vm:ColorsViewModel />
+            </Frame.BindingContext>
+            <VerticalStackLayout>
+                <Label 
+                    Text="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="{Binding Red}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Slider 
+                    Value="{Binding Red}" 
+                    Minimum="0" 
+                    Maximum="255" />
+                <Label 
+                    Text="Green"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="{Binding Green}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Slider 
+                    Value="{Binding Green}" 
+                    Minimum="0" 
+                    Maximum="255" />
+                <Label 
+                    Text="Blue"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="{Binding Blue}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Slider 
+                    Value="{Binding Blue}" 
+                    Minimum="0" 
+                    Maximum="255" />
+                <Rectangle 
+                    BackgroundColor="{Binding Color}" 
+                    WidthRequest="100" 
+                    HeightRequest="100"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
