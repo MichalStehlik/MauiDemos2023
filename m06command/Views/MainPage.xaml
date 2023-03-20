@@ -3,10 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:m06command"
              xmlns:vm="clr-namespace:m06command.ViewModels"
+             xmlns:conv="clr-namespace:m06command.Converters"
              x:Class="m06command.MainPage">
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <x:Array x:Key="pictures" Type="{x:Type x:String}">
+            <x:String>vampire.png</x:String>
+            <x:String>werewolf.png</x:String>
+            <x:String>rusalka.png</x:String>
+            <x:String>leshy.png</x:String>
+        </x:Array>
+        <x:String x:Key="vampir">vampire.png</x:String>
+        <x:String x:Key="werewolf">werewolf.png</x:String>
+        <x:String x:Key="rusalka">rusalka.png</x:String>
+        <x:String x:Key="leshy">leshy.png</x:String>
+        <conv:IntToPictureNameConverter x:Key="int2Pic" Pictures="{StaticResource pictures}"/>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
@@ -14,29 +28,32 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="{Binding Position, Converter={StaticResource int2Pic}}"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
+                Text="{Binding Position}"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Text="Alert me"
+                Command="{Binding AlertCommand}"
+                HorizontalOptions="Center" />
+            <Button
+                Text="Prev"
+                Command="{Binding PreviousCommand}"
+                HorizontalOptions="Center" />
+            <Button
+                Text="Next"
+                Command="{Binding NextCommand}"
+                HorizontalOptions="Center" />
+            <Button
+                Text="2"
+                Command="{Binding SetCommand}"
+                CommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

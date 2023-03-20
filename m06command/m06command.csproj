@@ -49,7 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Converters\" />
+	  <None Remove="Resources\Images\leshy.png" />
+	  <None Remove="Resources\Images\rusalka.png" />
+	  <None Remove="Resources\Images\vampire.png" />
+	  <None Remove="Resources\Images\werewolf.png" />
 	</ItemGroup>
 
 </Project>
