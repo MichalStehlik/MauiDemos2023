@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m04binding", "m04binding\m0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m05mvvm", "m05mvvm\m05mvvm.csproj", "{4E117A29-E5BF-4B91-820A-456990F9792C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "m06command", "m06command\m06command.csproj", "{034715C1-7BB5-4468-8946-CE16D892A23B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m06command", "m06command\m06command.csproj", "{034715C1-7BB5-4468-8946-CE16D892A23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "m07styles", "m07styles\m07styles.csproj", "{8DB507FA-3AC3-4759-A70F-5F00B49CE372}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,12 @@ Global
 		{034715C1-7BB5-4468-8946-CE16D892A23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{034715C1-7BB5-4468-8946-CE16D892A23B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{034715C1-7BB5-4468-8946-CE16D892A23B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB507FA-3AC3-4759-A70F-5F00B49CE372}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
