@@ -17,6 +17,7 @@
             VerticalOptions="Center">
 
             <ListView 
+                x:Name="lvStudents"
                 ItemsSource="{Binding Students}" 
                 SelectedItem="{Binding SelectedStudent, Mode=TwoWay, UpdateSourceEventName=PropertyChanged}">
                 <ListView.ItemTemplate>
@@ -38,7 +39,12 @@
                                 FontAttributes="Bold"
                                 Grid.Column="1"
                                 />
-                                <Button Text="Remove" Grid.Column="1"/>
+                                <Button 
+                                    Text="Remove" 
+                                    Grid.Column="2"
+                                    Command="{Binding Source={x:Reference lvStudents}, Path=BindingContext.RemoveCommand}" 
+                                    CommandParameter="{Binding}"
+                                    />
                             </Grid>
                     
                     </ViewCell>
