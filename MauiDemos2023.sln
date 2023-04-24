@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m07styles", "m07styles\m07s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m08collections", "m08collections\m08collections.csproj", "{CD3D004A-12DC-48DA-9E91-B0EEFC8B44BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "m09platform", "m09platform\m09platform.csproj", "{92E6D09A-3209-45C5-BB54-EC3A5E121574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m09platform", "m09platform\m09platform.csproj", "{92E6D09A-3209-45C5-BB54-EC3A5E121574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "m10sensors", "m10sensors\m10sensors.csproj", "{15212728-608E-4362-A6EC-E3DD5BB84293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,12 @@ Global
 		{92E6D09A-3209-45C5-BB54-EC3A5E121574}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92E6D09A-3209-45C5-BB54-EC3A5E121574}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92E6D09A-3209-45C5-BB54-EC3A5E121574}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15212728-608E-4362-A6EC-E3DD5BB84293}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

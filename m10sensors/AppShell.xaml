@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="m10sensors.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:m10sensors"
+    xmlns:view="clr-namespace:m10sensors.Views"
+    Shell.FlyoutBehavior="Flyout">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Úvod">
+            <ShellContent
+                Title="Titul"
+                ContentTemplate="{DataTemplate view:MainPage}"
+                Route="MainPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Kompas">
+            <ShellContent
+                Title="Kompas"
+                ContentTemplate="{DataTemplate view:CompassPage}"
+                Route="CompassPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Umístění">
+            <ShellContent
+                Title="Kompas"
+                ContentTemplate="{DataTemplate view:LocationPage}"
+                Route="LocationPage" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Kamera">
+            <ShellContent
+                Title="Kamera"
+                ContentTemplate="{DataTemplate view:CameraPage}"
+                Route="CameraPage" />
+        </Tab>
+    </FlyoutItem>
+</Shell>
