@@ -9,8 +9,22 @@
     </ContentPage.BindingContext>
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="{Binding Status}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Latitude}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Longitude}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Altitude}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Cache" Command="{Binding ReadCachedCommand}"/>
+        <Button Text="GPS" Command="{Binding ReadCachedCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
