@@ -9,6 +9,11 @@ using Android.Runtime;
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 [assembly: UsesPermission(Manifest.Permission.AccessBackgroundLocation)]
 
+[assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
+[assembly: UsesPermission(Android.Manifest.Permission.Camera)]
+[assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage, MaxSdkVersion = 32)]
+
+
 namespace m10sensors
 {
     [Application]
