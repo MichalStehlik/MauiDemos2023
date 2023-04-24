@@ -12,6 +12,6 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Foto" Command="{Binding TakePhotoCommand}" />
+        <Button Text="Foto" Command="{Binding TakePhotoCommand}" Margin="5"/>
     </VerticalStackLayout>
 </ContentPage>

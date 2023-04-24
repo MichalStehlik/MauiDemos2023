@@ -12,6 +12,6 @@
             Text="{Binding Value}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="{Binding Status}" Command="{Binding SwitchCommand}"/>
+        <Button Text="{Binding Status}" Command="{Binding SwitchCommand}" Margin="5"/>
     </VerticalStackLayout>
 </ContentPage>

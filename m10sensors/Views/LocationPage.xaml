@@ -24,7 +24,7 @@
             Text="{Binding Altitude}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Cache" Command="{Binding ReadCachedCommand}"/>
-        <Button Text="GPS" Command="{Binding ReadCachedCommand}"/>
+        <Button Text="Cache" Command="{Binding ReadCachedCommand}" Margin="5"/>
+        <Button Text="GPS" Command="{Binding ReadCachedCommand}" Margin="5"/>
     </VerticalStackLayout>
 </ContentPage>
